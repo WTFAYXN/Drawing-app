@@ -14,8 +14,8 @@ def startDrawing(event):
 def draw(event):
     global isDrawing, prev_x, prev_y
     if isDrawing:
-        current_x, current_y = event.x, event.prev_y
-        canvas.create_line(prev_x,prev_y, current_x, current_y, fill= drawing_color, width= line_width, capstyle=tk.ROUND, smooth=True)
+        current_x, current_y = event.x, event.y
+        canvas.create_line(prev_x,prev_y, current_x, current_y, fill= drawing_color, width= lineWidth, capstyle=tk.ROUND, smooth=True)
         prev_x, prev_y = current_x, current_y
 
 #function to stop drawing
